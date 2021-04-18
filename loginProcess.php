@@ -6,7 +6,7 @@ $password = $_POST['pwd'];
 $admins = [ 'gl2@insat.tn' => '1000' , 'i@a.com' => '2000', 'ia@ia.com' => '3000' ];
 
 
-if(isset($email) && isset($password)){
+if(isset($email) && isset($password) && $email!="" && $password!=""){
     foreach ($admins as $mail => $pwd ) {
         if(($email==$mail)&&($password ==$pwd)){
             echo $pwd;

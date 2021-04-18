@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
     <!doctype html>
     <html lang="en">
@@ -12,7 +13,6 @@
 <body>
 <?php
 if (isset($_SESSION['user'])) {
-    var_dump($_SESSION['user']);
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -26,7 +26,7 @@ if (isset($_SESSION['user'])) {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php">Logout</a>
-                    <?php unset($_SESSION['user']) ; ?>
+
                 </li>
             </ul>
         </div>

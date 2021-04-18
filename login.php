@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $pageTitle = 'Login' ;
 include_once 'fragments/header.php';
 ?>
