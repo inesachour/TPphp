@@ -2,7 +2,14 @@
 
 $pageTitle = 'Login' ;
 include_once 'fragments/header.php';
+
+if (isset($_SESSION['user'])) {
+    header('location:home.php');
+}
+
+
 ?>
+
 
 <div class="container" >
     <form action="loginProcess.php" method="post" >
