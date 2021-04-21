@@ -26,8 +26,10 @@ if (isset($_SESSION['user'])) {
                     <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="historique.php">Historique</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="logout.php">Logout</a>
-
                 </li>
             </ul>
         </div>
