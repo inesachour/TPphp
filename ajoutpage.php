@@ -7,7 +7,7 @@ include_once 'fragments/header.php';
 ?>
 
 <form class="container" action="ajouter.php" method="post" enctype="multipart/form-data">
-    <div class="form-group">
+    <div class="form-group" id="s">
         <label>Nom</label>
         <input type="text" class="form-control" name="nom">
         <label>Prenom</label>

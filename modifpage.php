@@ -2,6 +2,7 @@
 include_once 'autoload.php';
 $pageTitle = 'Modifier';
 include_once 'fragments/header.php';
+if(!isset($_SESSION['user'])) header('location:login.php');
 $personneRepository = new PersonneRepository();
 $personne = $personneRepository->findByCin($_SESSION['id']);
 
@@ -9,17 +10,27 @@ $personne = $personneRepository->findByCin($_SESSION['id']);
 <form class ="container" method="post" action="modifier.php" enctype="multipart/form-data">
         <div class="form-group">
             <label>Nom</label>
-            <input type="text" class="form-control" name="nom" placeholder= <?= $personne->nom ?> >
+            <label>
+                <input type="text" class="form-control" name="nom" placeholder= <?= $personne->nom ?> >
+            </label>
             <label>Prenom</label>
-            <input type="text" class="form-control" name="prenom" placeholder= <?= $personne->prenom ?>>
+            <label>
+                <input type="text" class="form-control" name="prenom" placeholder= <?= $personne->prenom ?>>
+            </label>
             <label>Age</label>
-            <input type="text" class="form-control" name="age" placeholder= <?= $personne->age ?>>
+            <label>
+                <input type="text" class="form-control" name="age" placeholder= <?= $personne->age ?>>
+            </label>
             <label>Section</label>
-            <input type="text" class="form-control" name="section" placeholder= <?= $personne->section ?>>
+            <label>
+                <input type="text" class="form-control" name="section" placeholder= <?= $personne->section ?>>
+            </label>
             <label>CIN</label>
-            <input type="text" class="form-control" name="cin" placeholder= <?= $personne->cin ?>>
+            <label>
+                <input type="text" class="form-control" name="cin" placeholder= <?= $personne->cin ?>>
+            </label>
             <label >Image</label>
-            <img id ="photo" src= <?= $personne->image ?>>
+            <img id="photo-modif" alt="photo" src= <?= $personne->image ?> >
             <input type="file" class="form-control-file" name="image" >
         </div>
 

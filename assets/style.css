@@ -1,5 +1,11 @@
 
 #photo{
-    width :55px ;
+    width :60px ;
     height : auto;
+}
+
+#photo-modif{
+    width :75px ;
+    height : auto;
+    margin: 20px 50px;
 }

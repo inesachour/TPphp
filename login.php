@@ -6,8 +6,6 @@ include_once 'fragments/header.php';
 if (isset($_SESSION['user'])) {
     header('location:home.php');
 }
-
-
 ?>
 
 

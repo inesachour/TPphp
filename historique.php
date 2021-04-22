@@ -5,15 +5,17 @@ $historiques = $historiqueRepository->findAll();
 $pageTitle = 'Historique';
 include_once 'fragments/header.php';
 
+if(!isset($_SESSION['user'])) header('location:login.php');
+
 ?>
 <form class="container" >
-    <table class="table table-hover">
+    <table class="table">
         <tr>
             <th scope="col">Email</th>
             <th scope="col">Date</th>
             <th scope="col">Operation</th>
             <th scope="col">CIN</th>
-            <td scope="col">Details</td>
+            <th scope="col">Details</th>
         </tr>
 
         <?php

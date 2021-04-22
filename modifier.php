@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include_once 'autoload.php';
@@ -30,9 +31,9 @@ if(!isset($_SESSION['bdError'])) {
     $date = date('d-m-y h:i:s');
     $detail = "Le champ : ".$personne->cin.", ".$personne->nom.", ".$personne->prenom.", ".$personne->age.", ".$personne->age.", ".$personne->image.", | a changé a : ${cin}, ${nom}, ${prenom}, ${age}, ${section}, ${image}";
     $historyRepository->ajouthistorique($_SESSION['user'],$date,"modifcation",$cin,$detail);
-   header('location:home.php');
-   unset($_SESSION['id']);
+    header('location:home.php');
+    unset($_SESSION['id']);
 }
 else{
-   header('location:modifpage.php');
+    header('location:modifpage.php');
 }

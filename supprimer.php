@@ -7,8 +7,9 @@ $personneRepository = new PersonneRepository();
 $historyRepository = new HistoriqueRepository();
 $date = date('d-m-y h:i:s');
 $historyRepository->ajouthistorique($_SESSION['user'],$date,"suppression",$id,"");
-$personne = $personneRepository->Delete($id);
-
+$personne = $personneRepository->findByCin($id);
+unlink($personne->image);
+$personneRepository->Delete($id);
 header('location:home.php');
 
 ?>
